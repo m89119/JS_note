@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <SCript src="JQ.min.js"></SCript>
+</head>
+<body>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <script>
+        $(function(){ // 隱式疊代:所有按鈕給點擊事件
+            $('button').click(function(){
+                // 當前元素變換BGC 其餘的按鈕去掉BGC
+                // $(this).css('background','pink');
+                // $(this).siblings('button').css('background','');
+                // 鍊式編程
+                $(this).css('color','red').siblings().css('color',"");
+            })
+        })
+    </script>
+</body>
+</html>

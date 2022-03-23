@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <SCript src="JQ.min.js"></SCript>
+</head>
+<body>
+    <video src="還我國動(注意音量)(Volume Warning).mp4" muted style= width:800px height:800px></video>
+    <script>
+        // 1-1.直接獲取影片就會是jq對象
+        $('video');
+        // 1-2.已用原生js 獲取過來時轉jq
+        var myvideo = document.querySelector('video');
+        $(myvideo);
+        // 2-1.JQ對象轉換成DOM對象
+        // myvideo.play();
+        $('video')[0].play();
+        $('video').get(0).play();
+    </script>
+    
+</body>
+</html>

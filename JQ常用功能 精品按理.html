@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <SCript src="JQ.min.js"></SCript>
+    <script>
+        $(function(){
+            // 1.鼠標經過事件
+            $('#left li').mouseover(function(){
+                var index = $(this).index();
+                // $('#content div').eq(index).show();
+                // $('#content div').eq(index).siblings().hide();
+                // 鍊式編成
+                $('#content div').eq(index).show().siblings().hide();
+            })
+        })
+    </script>
+</head>
+<body>
+   <div class="wrapper">
+       <ul id="left">
+           <li><a href="#">1</a></li>
+           <li><a href="#">2</a></li>
+           <li><a href="#">3</a></li>
+           <li><a href="#">4</a></li>
+           <li><a href="#">5</a></li>
+           <li><a href="#">6</a></li>
+           <li><a href="#">7</a></li>
+           <li><a href="#">8</a></li>
+           <li><a href="#">9</a></li>
+       </ul>
+   </div>
+    <div id="content">
+        <div><a href="#"><img src="0.jpg" width="200" height="250"></a></div>
+        <div><a href="#"><img src="1.jpg" width="200" height="250"></a></div>
+        <div><a href="#"><img src="2.jpg" width="200" height="250"></a></div>
+        <div><a href="#"><img src="3.jpg" width="200" height="250"></a></div>
+        <div><a href="#"><img src="4.jpg" width="200" height="250"></a></div>
+        <div><a href="#"><img src="5.jpg" width="200" height="250"></a></div>
+        <div><a href="#"><img src="6.jpg" width="200" height="250"></a></div>
+        <div><a href="#"><img src="7.jpg" width="200" height="250"></a></div>
+        <div><a href="#"><img src="8.jpg" width="200" height="250"></a></div>
+    </div>
+</body>
+</html>

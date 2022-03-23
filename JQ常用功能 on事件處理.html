@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JQ.min.js"></script>
+</head>
+<body>
+    <div>123</div>
+    <ul>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+    </ul>
+    <ol>
+
+    </ol>
+    <script>
+        $(function(){
+        //   $('div').on({
+        //       mouseenter: function(){
+        //           $(this).css('color','pink');
+        //       },
+        //       click: function(){
+        //           $(this).css('color','skyblue');
+        //       }
+              $('div').on('mouseenter mouseleave', function(){
+                  $(this).css('color','pink')
+              
+          })
+        //   on可綁定後來創建的動態綁定事件
+        $('ol').on('click', 'li', function(){
+            alert(11);
+        })
+        var li = $('<li>我是後來創建的</li>');
+        $('ol').append(li);
+        })
+    </script>
+</body>
+</html>

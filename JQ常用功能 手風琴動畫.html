@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <SCript src="JQ.min.js"></SCript>
+    
+</head>
+<body>
+    
+    <script>
+       $(function(){
+           $('.king li').mouseenter(function(){
+            //    1.當前圖片變寬，設置淡入淡出效果
+               $(this).stop().animate({
+                   width:244
+               },200).find('.small').stop().fadeOut().siblings('.big').stop().fadeIn();
+            //    2.其餘小圖片變小
+            $(this).sibings('li').stop().animate({
+                width:69
+            }).find('.small').stop().fadeIn().siblings('.big').stop().fadeOut();
+           })
+       })
+    </script>
+</body>
+</html>

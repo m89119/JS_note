@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JQ.min.js"></script>
+</head>
+<body>
+   <div></div>
+   <span></span>
+    <script>
+        $(function(){
+            function $(ele){
+                return document.querySelector(ele);
+            }
+            console.log($('div'));
+            // 1.將$改成jQuery
+            // jQuery.each();
+            // 2.var xx =$.noConflict();
+            var NMSL =jQuery.noConflict();
+            console.log(NMSL('span'))
+        })
+    </script>
+</body>
+</html>

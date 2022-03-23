@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <SCript src="JQ.min.js"></SCript>
+</head>
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+</style>
+<body> 
+    <div></div>
+    <span></span>
+    <script>
+        // 等DOM加載完畢再去執行JS代碼
+        // $(function(){
+        //    要執行的代碼
+        // })
+        $('div').hide();
+        // DOM對象VS JQ對象
+        var myDIV =document.querySelector('div'); // DOM對象
+        console.dir(myDIV);
+
+        var mySPAN = document.querySelector('span'); // DOM對象
+        console.dir(mySPAN);
+
+        $('div'); // jq對象
+        console.dir($('div'));
+        $('span'); // jq對象
+        console.dir($('span'));
+
+        // DOM對象只能用原聲方法，JQ對象只能用JQ方法
+    </script>
+    
+</body>
+</html>

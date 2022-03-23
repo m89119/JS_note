@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JQ.min.js"></script>
+</head>
+<body>
+   
+    <script>
+        $(function(){
+        //  1.全選 全不選按鈕 把全選按鈕(Checkall)的狀態復值給三個小按鈕(j-checkbox)
+        // 事件可使用change 
+        $('.checkall').change(function(){
+            $('.j-checkbox,.checkall').prop('checked',$(this).prop('checked'))
+        })
+        // 2.小的複選框都被選中 全選按鈕亮
+        $('.j-checkbox').change(function(){
+            if($('.j-checkbox:checked').length === $('.j-checkbox').length){
+                $('.checkall').prop('checked' ,true);
+            }else($('.checkall').prop('checked' ,false));
+        })
+        })
+    </script>
+</body>
+</html>

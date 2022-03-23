@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <SCript src="JQ.min.js"></SCript>
+</head>
+<body>
+    <ol>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li class="item">我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+    </ol>
+    <ul>
+        <li>我是ul 的li</li>
+        <li>我是ul 的li</li>
+        <li>我是ul 的li</li>
+        <li>我是ul 的li</li>
+        <li>我是ul 的li</li>
+        <li>我是ul 的li</li>
+    </ul>
+    <div class="current">我有current</div>
+    <div >我沒有current</div>   
+    <script>
+        $(function(){
+            $('ol .item').siblings('li').css('color','pink');
+            $('ul li:eq(0)').css('color','red');
+            $('ul li').eq(1).css('color','skyblue');
+        })
+    </script>
+</body>
+</html>

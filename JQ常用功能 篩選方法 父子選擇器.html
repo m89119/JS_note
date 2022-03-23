@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <SCript src="JQ.min.js"></SCript>
+</head>
+<body>
+    <div class="grandfather"></div>
+    <div class="father">
+        <div class="son">丁Z</div>
+    </div>
+    <div class="nav">
+        <p>我是P</p>
+        <div>
+            <p>我是P</p>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            // 1.特 parent()
+            console.log($('.son').parent());
+            // 2.丁Z
+            // (1)親兒子 children()
+            $('.nav').children("p").css('background','pink');
+            // (2)可以選出所有的後代(包刮子和孫)
+            $('.nav').find('p').css('color','skyblue');
+
+        })
+    </script>
+</body>
+</html>

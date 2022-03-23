@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <SCript src="JQ.min.js"></SCript>
+</head>
+<body>
+    
+    <div>我是div</div>
+    <div>我是div</div>
+    <div>我是div</div>
+    <div>我是div</div>
+    <ul>
+        <li>我是li的</li>
+        <li>我是li的</li>
+        <li>我是li的</li>
+    </ul>
+    <script>
+        // 1.選取4個DIV元素
+        console.log($('div'));
+        // 2.給4個DIV BGC為PINK JQ對象不能使用style : bgc=pink
+        $('div').css('background','pink'); 
+        // 影式疊代:把所有匹配的所有元素內部進行循環 給每一個CSS這個方法
+        $("ul li").css('background','red');
+
+
+    </script>
+</body>
+</html>
